@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Exercicio1 {
-    public void iniciar(){
+    public static void main(String[] args){
         ArrayList<Jogador> time = new ArrayList<>();
         //Inicialização dos jogadores e inclusão no time
         Jogador neymar = new Jogador(1, "Neymar da Silva Santos Júnior", "Neymar", LocalDate.of(1992, 2, 5), 10, "Atacante", 100);
@@ -27,8 +27,8 @@ public class Exercicio1 {
         time.add(cassio);
         Jogador nikao = new Jogador(10, "Maycon Vinícius Ferreira da Cruz", "Nikão", LocalDate.of(1992, 7, 29), 10, "Meia", 95);
         time.add(nikao);
-        Jogador wagner = new Jogador(10, "Maycon Vinícius Ferreira da Cruz", "Nikão", LocalDate.of(1992, 7, 29), 10, "Meia", 95);
-        time.add(wagner);
+        Jogador xavier = new Jogador(11, "João Vitor Xavier de Almeida", "Xavier", LocalDate.of(2000, 3, 2), 39, "Meia", 90);
+        time.add(xavier);
         //Operações
         weverton.sofrerLesao();
         neymar.aplicarCartoesAmarelos(1);
@@ -37,11 +37,12 @@ public class Exercicio1 {
         cassio.aplicarCartaoVermelho();
         nikao.sofrerLesao();
         quintero.aplicarCartoesAmarelos(3);
-        wagner.sofrerLesao();
+        xavier.sofrerLesao();
         fred.aplicarCartoesAmarelos(2);
         gabigol.aplicarCartaoVermelho();
         joaoGomes.aplicarCartoesAmarelos(1);
         //Dados do time
+        System.out.println("------ TomorrowTechTalents FC ------");
         System.out.println("Situação da equipe:");
         time.forEach(System.out::println);
     }
