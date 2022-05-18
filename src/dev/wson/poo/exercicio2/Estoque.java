@@ -25,12 +25,13 @@ public class Estoque {
         produto.setSessao(novoProduto.getSessao());
         produto.setTipo(novoProduto.getTipo());
         produto.setQuantidade(produto.getQuantidade() + novoProduto.getQuantidade());
-        System.out.println("--- Atualização ---\nAs alterações foram salvas.");
     }
     public void adicionarProduto(String nome, int sessao, String tipo, int quantidade, String marca) {
         Produto novoProduto = new Produto(nome, sessao, tipo, quantidade, marca);
-        if (getIndexProduto(novoProduto) != -1){
-            atualizarProduto(getIndexProduto(novoProduto), novoProduto);
+        int index = getIndexProduto(novoProduto);
+        if (index != -1){
+            atualizarProduto(index, novoProduto);
+            System.out.println("--- Atualização ---\nAs alterações foram salvas.");
         } else {
             produtos.add(novoProduto);
             System.out.println("--- Inclusão ---\nNovo produto adicionado.");
