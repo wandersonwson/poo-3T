@@ -1,7 +1,7 @@
 package dev.wson.poo.exercicio2;
 
 public class Produto {
-    private int ID;
+    private int id;
     private String nome;
     private int sessao;
     private String tipo;
@@ -11,7 +11,7 @@ public class Produto {
 
     public Produto(String nome, int sessao, String tipo, int quantidade, String marca) {
         contador++;
-        ID = contador;
+        id = contador;
         this.nome = nome;
         this.sessao = sessao;
         this.tipo = tipo;
@@ -19,7 +19,7 @@ public class Produto {
         this.marca = marca;
     }
     public int getID() {
-        return ID;
+        return id;
     }
     public String getNome() {
         return nome;
@@ -53,7 +53,7 @@ public class Produto {
     }
     @Override
     public String toString() {
-        return  nome + " [ID: #" + ID + ", marca: " + marca + ", quantidade: " + quantidade + ", sessao: "
+        return  nome + " [ID: #" + id + ", marca: " + marca + ", quantidade: " + quantidade + ", sessao: "
                 + sessao + ", tipo: " + tipo + "]";
     }
 }

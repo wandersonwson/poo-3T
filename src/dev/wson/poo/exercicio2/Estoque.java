@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Estoque {
-    private int ID;
+    private int id;
     private String nome;
     private List<Produto> produtos;
     private static int contador;
 
     public Estoque(String nome) {
         contador++;
-        ID = contador;
+        id = contador;
         this.nome = nome;
         this.produtos = new ArrayList<>();
     }
@@ -73,7 +73,7 @@ public class Estoque {
     }
     public void imprimirRelatorio(){
         System.out.println("------ TomorrowTechTalents LTDA ------");
-        System.out.printf("Estoque %s [ID #%d]%n", nome, ID);
+        System.out.printf("Estoque %s [ID #%d]%n", nome, id);
         produtos.forEach(System.out::println);
         System.out.println("------");
     }
